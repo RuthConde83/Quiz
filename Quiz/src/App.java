@@ -36,6 +36,8 @@ import java.util.Scanner;
  *         especificación técnica del código.
  * 
  *         ** Obligatorio entrevista de prácticas.
+ * 
+ *         comentario extras
  */
 public class App {
     static final String TITULO_MENU = "MENU INICIAL";
