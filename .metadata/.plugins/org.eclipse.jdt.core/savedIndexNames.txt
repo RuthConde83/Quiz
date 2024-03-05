@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+E:\UCAM 1º DAM\PROGRAMACION_PRUEBAS\Práctica2 version javi\.metadata\.plugins\org.eclipse.jdt.core
