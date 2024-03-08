@@ -1,0 +1,43 @@
+package unidad6.tarea5.galeria;
+
+
+/**
+ * 
+ * @author RUTH CONDE ALEMÁN
+ * 
+ *         La clase Obra tendrá estos 5 atributos: código (de tipo String),
+ *         artista (de tipo Artista), descripción (de tipo String), obraVendida
+ *         (de tipo boolean) y precio (de tipo double).
+ * 
+ *         - La clase Obra tendrá 1 constructor, el cual recibirá por parámetro
+ *         estos 3 campos: código, artista y precio y el resto de atributos
+ *         cogerán un valor por defecto, el atributo obraVendida será
+ *         inicializado a false y la descripción con el valor “sin especificar”
+ *         dentro del propio constructor.
+ * 
+ *         - En la clase Obra tendremos una lista “listaObras” para ir
+ *         almacenando todos los objetos de tipo Obra que nos vamos creando.
+ * 
+ *         - Implementar los métodos get/set y toString de la clase Obra.
+ */
+
+public class Obra {
+	
+	private String codigo;
+	private Artista artista;
+	private String descripcion;
+	private boolean obraVendida;
+	private double precio;
+	
+	
+	public Obra(String codigo, Artista artista, double precio) {
+		
+		this.codigo = codigo;
+		this.artista = artista;
+		this.precio = precio;
+	}
+	
+	
+	
+
+}

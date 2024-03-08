@@ -1,0 +1,105 @@
+package unidad6.tarea5.galeria;
+
+import java.util.ArrayList;
+
+/**
+ * 
+ * @author RUTH CONDE ALEMÁN
+ * 
+ *         La clase Obra tendrá estos 5 atributos: código (de tipo String),
+ *         artista (de tipo Artista), descripción (de tipo String), obraVendida
+ *         (de tipo boolean) y precio (de tipo double).
+ * 
+ *         - La clase Obra tendrá 1 constructor, el cual recibirá por parámetro
+ *         estos 3 campos: código, artista y precio y el resto de atributos
+ *         cogerán un valor por defecto, el atributo obraVendida será
+ *         inicializado a false y la descripción con el valor “sin especificar”
+ *         dentro del propio constructor.
+ * 
+ *         - En la clase Obra tendremos una lista “listaObras” para ir
+ *         almacenando todos los objetos de tipo Obra que nos vamos creando.
+ * 
+ *         - Implementar los métodos get/set y toString de la clase Obra.
+ */
+
+public class Obra {
+
+	private String codigo;
+	private Artista artista;
+	private String descripcion;
+	private boolean obraVendida;
+	private double precio;
+
+	ArrayList<Obra> listaObras = new ArrayList<>();
+
+	public Obra(String codigo, Artista artista, double precio) {
+
+		this.codigo = codigo;
+		this.artista = artista;
+		this.precio = precio;
+		this.obraVendida = false;
+		this.descripcion = "sin especificar";
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public Artista getArtista() {
+		return artista;
+	}
+
+	public void setArtista(Artista artista) {
+		this.artista = artista;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+	public boolean isObraVendida() {
+		return obraVendida;
+	}
+
+	public void setObraVendida(boolean obraVendida) {
+		this.obraVendida = obraVendida;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	public ArrayList<Obra> getListaObras() {
+		return listaObras;
+	}
+
+	public void setListaObras(ArrayList<Obra> listaObras) {
+		this.listaObras = listaObras;
+	}
+
+	@Override
+	public String toString() {
+		return "Obra [codigo=" + codigo + ", artista=" + artista + ", descripcion=" + descripcion + ", obraVendida="
+				+ obraVendida + ", precio=" + precio + ", listaObras=" + listaObras + "]";
+	}
+	
+	public void datosFicticios() {
+		
+		
+		
+		
+	}
+
+}

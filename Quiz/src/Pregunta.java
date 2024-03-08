@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * la pregunta, 3 opciones de respuesta y la solución a la pregunta
  * (respuesta correcta).
  */
+
 public class Pregunta {
 
     private String pregunta;
@@ -37,10 +38,6 @@ public class Pregunta {
         return respuestas;
     }
 
-    public void agregarRespuesta(String respuesta) {
-        this.respuestas.add(respuesta);
-    }
-
     public int getSolucion() {
         return solucion;
     }
@@ -49,6 +46,28 @@ public class Pregunta {
         this.solucion = solucion;
     }
 
+    /**
+     * Método toString no estático, muestra las respuestas de la pregunta.
+     */
+    @Override
+    public String toString() {
+        return "Respuestas: " + respuestas;
+
+    }
+
+    /**
+     * Método agregarRespuesta no estático, añade una respuesta a la lista de
+     * 
+     * @param respuesta respuestas.
+     */
+    public void agregarRespuesta(String respuesta) {
+        this.respuestas.add(respuesta);
+    }
+
+    /**
+     * Método mostrarPregunta no estático, muestra la pregunta y las respuestas de
+     * la misma.
+     */
     public void mostrarPregunta() {
         String respuestaTexto = "";
         System.out.println(pregunta);
@@ -58,15 +77,16 @@ public class Pregunta {
         System.out.println(respuestaTexto);
     }
 
+    /**
+     * Método validarSolucion no estático, valida si la solución introducida es
+     * correcta.
+     * 
+     * @param solucion
+     * @return boolean true si la solución es correcta, false si no lo es.
+     */
     public boolean validarSolucion(int solucion) {
 
         return this.solucion == solucion;
-
-    }
-
-    @Override
-    public String toString() {
-        return "Respuestas: " + respuestas;
 
     }
 

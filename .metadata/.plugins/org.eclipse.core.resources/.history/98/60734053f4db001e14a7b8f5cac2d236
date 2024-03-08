@@ -1,0 +1,16 @@
+package unidad6.tarea5.galeria;
+
+/**
+ * 
+ * @author RUTH CONDE ALEMÁN
+ * 
+ */
+
+public class PrincipalGaleriaArte {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
