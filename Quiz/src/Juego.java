@@ -9,6 +9,11 @@ import java.util.Scanner;
  * Crear la clase Juego con los atributos jugadores (que será un array
  * de objetos Jugador) y preguntas (será un array de objetos Pregunta).
  */
+
+/**
+ * La clase Juego es la encargada de gestionar el juego, los jugadores y las
+ * preguntas.
+ */
 class Juego {
 
     private ArrayList<Jugador> jugadores;
@@ -18,12 +23,20 @@ class Juego {
     public final int RONDAS_PARTIDA = 3;
     public final int PUNTOS_POR_PREGUNTA = 10;
 
+    /**
+     * Constructor de la clase Juego, inicializa los atributos jugadores y
+     * preguntas.
+     */
     public Juego() {
         jugadores = new ArrayList<>();
         preguntas = new ArrayList<>();
         cargarJugadoresIniciales();
         cargarPreguntasIniciales();
     }
+
+    /**
+     * Método jugar no estático, inicia el juego y muestra el resultado final.
+     */
 
     public void jugar() {
 
@@ -36,6 +49,11 @@ class Juego {
         System.out.println("\n-------- Fin de Partida --------\n");
 
     }
+
+    /**
+     * Método empezarPartida no estático, inicia la partida y muestra el resultado
+     * final.
+     */
 
     public void empezarPartida() {
         int puntuacionPartida = 0;
@@ -70,6 +88,12 @@ class Juego {
         mostrarPuntuacionFinal(puntuacionPartida);
     }
 
+    /**
+     * Método getPreguntasPartida no estático, devuelve un array de preguntas para
+     * la partida.
+     * 
+     * @return ArrayList<Pregunta> preguntasPartida
+     */
     private ArrayList<Pregunta> getPreguntasPartida() {
         Random random = new Random();
 
@@ -91,6 +115,12 @@ class Juego {
         return preguntasPartida;
     }
 
+    /**
+     * Método mostrarPuntuacionFinal no estático, muestra la puntuación final de la
+     * partida.
+     * 
+     * @param puntuacion Puntuación obtenida por el jugador en la partida.
+     */
     public void mostrarPuntuacionFinal(int puntuacion) {
         if (puntuacion == NUM_MAXIMO_PREGUNTAS * PUNTOS_POR_PREGUNTA) {
             System.out.println("Puntuacion Perfecta, Felicidades!!!");
@@ -101,12 +131,22 @@ class Juego {
         }
     }
 
+    /**
+     * Método seleccionarJugador no estático, muestra los jugadores disponibles y
+     * permite al usuario seleccionar uno.
+     * 
+     * @return jugadores.get(posicion - 1) Jugador seleccionado.
+     */
     private Jugador seleccionarJugador() {
         mostrarJugadores();
         int posicion = App.obtenerOpcion(1, jugadores.size(), "Seleccione un jugador: ");
         return jugadores.get(posicion - 1);
     }
 
+    /**
+     * Método agregarJugador no estático, permite al usuario agregar un nuevo
+     * jugador a la lista de jugadores.
+     */
     public void agregarJugador() {
 
         String nombre = "";
@@ -122,6 +162,11 @@ class Juego {
 
     }
 
+    /**
+     * Método mostrarPuntuaciones no estático, muestra las puntuaciones de los
+     * jugadores.
+     */
+
     public void mostrarPuntuaciones() {
 
         System.out.println("---------- Puntuaciones ----------\n");
@@ -131,6 +176,11 @@ class Juego {
         System.out.println("\n----------------------------------\n");
 
     }
+
+    /**
+     * Método eliminarJugador no estático, permite al usuario eliminar un jugador de
+     * la lista de jugadores.
+     */
 
     public void eliminarJugador() {
         System.out.println("---------- Jugadores ----------\n");
@@ -144,6 +194,9 @@ class Juego {
 
     }
 
+    /**
+     * Método mostrarJugadores no estático, muestra los jugadores disponibles.
+     */
     public void mostrarJugadores() {
         for (int i = 0; i < jugadores.size(); i++) {
             System.out.println((i + 1) + ") " + jugadores.get(i).toString());
@@ -151,6 +204,11 @@ class Juego {
         System.out.println("");
 
     }
+
+    /**
+     * Método crearPreguntas no estático, permite al usuario crear nuevas preguntas
+     * y añadirlas al juego.
+     */
 
     public void crearPreguntas() {
 
@@ -174,12 +232,21 @@ class Juego {
         System.out.println("");
     }
 
+    /**
+     * Método mostrarRespuestas no estático, muestra las respuestas de una pregunta.
+     * 
+     * @param respuestas ArrayList<String> Lista de respuestas.
+     */
     public void mostrarRespuestas(ArrayList<String> respuestas) {
         for (int i = 0; i < respuestas.size(); i++) {
             System.out.println((i + 1) + ") " + respuestas.get(i).toString());
         }
     }
 
+    /**
+     * Método cargarJugadoresIniciales no estático, carga jugadores iniciales al
+     * juego.
+     */
     public void cargarJugadoresIniciales() {
 
         String[] nombres = { "Javier", "Ruth", "Maria Angeles" };
@@ -192,6 +259,10 @@ class Juego {
 
     }
 
+    /**
+     * Método cargarPreguntasIniciales no estático, carga preguntas iniciales al
+     * juego.
+     */
     public void cargarPreguntasIniciales() {
 
         String[] preguntas = {

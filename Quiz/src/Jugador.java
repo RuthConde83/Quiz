@@ -1,7 +1,6 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.Objects;
 
 /**
  * Jugador
@@ -45,15 +44,27 @@ public class Jugador {
         this.puntuacion = puntuacion;
     }
 
-    public String mostrarPuntuacion() {
-        return "Nombre: " + nombre + " - " + "Puntuación: " + puntuacion;
-    }
-
     @Override
     public String toString() {
         return "Nombre: " + nombre + " - " + "Edad: " + edad + " - " + "Puntuación: " + puntuacion;
     }
 
+    /**
+     * Método mostrarPuntuacion no estático, muestra el nombre y la puntuación del
+     * jugador.
+     * 
+     * @return nombre y puntuación del jugador.
+     */
+    public String mostrarPuntuacion() {
+        return "Nombre: " + nombre + " - " + "Puntuación: " + puntuacion;
+    }
+
+    /**
+     * Método pedirNombreJugador estático, pide el nombre del jugador y lo devuelve.
+     * 
+     * @return nombre del jugador en minúsculas y sin espacios al principio y al
+     *         final.
+     */
     public static String pedirNombreJugador() {
         Scanner sc = new Scanner(System.in);
         String nombre = "";
@@ -78,6 +89,11 @@ public class Jugador {
     // Tarea Ruth, hacer un metodo que se llame pedirEdadJugador que le pida al
     // usuario su edad, valide si es mayor a 0 y que te devuelva la edad
 
+    /**
+     * Método pedirEdadJugador estático, pide la edad del jugador y la devuelve.
+     * 
+     * @return edad del jugador en números.
+     */
     public static int pedirEdadJugador() {
         Scanner sc = new Scanner(System.in);
         int edad = 0;
@@ -107,10 +123,20 @@ public class Jugador {
         return edad;
     }
 
+    /**
+     * Método sumarPuntos no estático, suma los puntos al jugador.
+     * 
+     * @param puntos
+     */
     public void sumarPuntos(int puntos) {
         this.puntuacion += puntos;
     }
 
+    /**
+     * Método restarPuntos no estático, resta los puntos al jugador.
+     * 
+     * @param puntos
+     */
     public void restarPuntos(int puntos) {
         this.puntuacion -= puntos;
     }

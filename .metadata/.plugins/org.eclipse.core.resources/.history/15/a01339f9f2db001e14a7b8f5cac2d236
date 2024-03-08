@@ -1,0 +1,20 @@
+package unidad6.tarea5.galeria;
+
+/**
+ * 
+ * @author RUTH CONDE ALEMÁN
+ * 
+ *         La clase Artista tendrá estos 3 atributos: nombre, web y telefono.
+ *         Esta clase Artista implementará los métodos get/set y el método
+ *         toString.
+ * 
+ *         - La clase Artista tendrá 1 constructor, el cual recibirá por
+ *         parámetro 2 campos: nombre y teléfono.
+ */
+
+public class Artista {
+
+	
+	
+	
+}

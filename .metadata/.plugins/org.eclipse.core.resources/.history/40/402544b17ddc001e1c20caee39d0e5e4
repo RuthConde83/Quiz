@@ -1,0 +1,152 @@
+package unidad6.tarea5.galeria;
+
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+/**
+ * 
+ * @author RUTH CONDE ALEMÁN
+ * 
+ *         Dada la especificación anterior, se enumeran los puntos que queremos
+ *         que tenga nuestro programa:
+ * 
+ *         1. Implementación de las clases Artista, Obra y Principal. Esta
+ *         última será el punto de entrada de la aplicación y por tanto tendrá
+ *         que tener implementado el método main.
+ * 
+ *         2. Implementar en la clase Principal un menú con las siguientes 5
+ *         opciones.
+ * 
+ *         (Opción 1)
+ * 
+ *         2.1. Mostrar todas las Obras. Esta opción recorrerá el array
+ *         listaObras y mostrará todos los datos de todas las Obras de la lista
+ *         (las vendidas y no vendidas).
+ * 
+ *         (Opción 2)
+ * 
+ *         2.2. Mostrar Obras no vendidas. Esta opción supone la realización de
+ *         los siguientes pasos:
+ * 
+ *         2.2.1. Recorrer el array listaObras y mostrar el código, nombre del
+ *         artista y precio de todas las Obras del array que no estén vendidas.
+ * 
+ *         2.2.2. Si no hubiera ninguna sin vender mostrar un mensaje
+ *         indicándolo.
+ * 
+ *         (Opción 3)
+ * 
+ *         2.3. Comprar Obra. Esta opción supone la realización de los
+ *         siguientes pasos:
+ * 
+ *         2.3.1. Solicitar por pantalla el código de la Obra que se quiere
+ *         comprar.
+ * 
+ *         2.3.2. Recorrer el array listaObras y buscar la Obra cuyo código es
+ *         igual que el introducido por teclado.
+ * 
+ *         2.3.3. Si se encuentra la Obra con ese código y está sin vender (es
+ *         decir, obraVendida es false) modificaremos el atributo obraVendida de
+ *         esa Obra a true para indicar que ya se ha vendido.
+ * 
+ *         2.3.4. Si por el contrario encuentra la obra y está vendida (es
+ *         decir, obraVendida es true) mostrar mensaje indicando que no se puede
+ *         comprar porque ya está vendida.
+ * 
+ *         2.3.5. Si no se encuentra ninguna Obra con ese código mostrar un
+ *         mensaje de error indicándolo.
+ * 
+ *         (Opción 4)
+ * 
+ *         2.4. Mostrar número de Obras vendidas. Para realizar esto haremos lo
+ *         siguiente:
+ * 
+ *         2.4.1. Crear un método “numObrasVendidas” que devolverá un entero
+ *         indicando el número total de Obras vendidas.
+ * 
+ *         2.4.2. El método recorrerá el array listaObras e irá comprobando una
+ *         a una si el atributo obraVendida es true, en caso de ser true
+ *         tendremos un contador que iremos incrementando por cada Obra vendida.
+ * 
+ *         2.4.3. Una vez recorrido todo el array el método devolverá el valor
+ *         del contador.
+ * 
+ *         2.4.4. En esta opción 4 debemos invocar a este método y recoger el
+ *         valor que nos devuelve y pintarlo por consola.
+ * 
+ *         (Opción 5)
+ * 
+ *         2.5. Salir. Esta opción mostrará un mensaje de despedida y finalizará
+ *         el programa.
+ * 
+ */
+
+public class PrincipalGaleriaArte {
+
+	public static Scanner scTxt = new Scanner(System.in);
+	public static Scanner scNum = new Scanner(System.in);
+	
+	
+	public static void mostrarObras() {
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+
+		int opcion = 0;
+
+		Obra.datosFicticios();
+		Obra.pintarObra();
+		
+		System.out.println("------------------------------------------------------------------------------------\n");
+
+		final String MENU = "---- Elige una opción: ----\n" 
+				+ "1 - Mostrar todas las Obras.\r\n"
+				+ "2 - Mostrar Obras no vendidas.\r\n" 
+				+ "3 - Comprar Obra.\r\n"
+				+ "4 - Mostrar número de Obras vendidas.\r\n" 
+				+ "5 - Salir.";
+
+		do {
+
+			try {
+
+				System.out.println(MENU);
+				opcion = scNum.nextInt();
+
+				switch (opcion) {
+
+				case 1:
+					break;
+
+				case 2:
+					break;
+
+				case 3:
+					break;
+
+				case 4:
+					break;
+
+				case 5:
+					System.out.println();
+					break;
+					
+					default:
+						System.err.println("Introduce una opción del 1 al 5.");
+
+				}
+
+			} catch (InputMismatchException ex) {
+				scNum.next();
+				System.err.println("ERROR! Introduzca números.");
+			}
+
+		} while (opcion != 5);
+
+	}
+
+}
